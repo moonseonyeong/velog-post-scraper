@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/moonseonyeong/velog-post-scraper#readme",
   "dependencies": {
-    "puppeteer": "^20.6.0"
+    "puppeteer": "^20.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
   }
 }
