@@ -36,10 +36,13 @@ export const getContent = async (page: Page) => {
   await page.waitForSelector('div.atom-one');
   const content = await page.evaluate(() => {
     const contentClassName = `atom-one`;
-    const content = document.getElementsByClassName(contentClassName)[0]?.innerHTML;
+    const content = document
+      .getElementsByClassName(contentClassName)[0]
+      ?.innerHTML.replaceAll('\n', '');
 
     return content;
   });
+
   return content;
 };
 
