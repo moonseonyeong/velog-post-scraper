@@ -66,3 +66,34 @@ export const getPost = async (page: Page) => {
     tags: await getTags(page),
   };
 };
+
+export const getPrevPost = async (page: Page) => {
+  await page.waitForSelector('#root>div:nth-child(2)>div:nth-child(7)');
+
+  try {
+    const prevPost = await page.evaluate(() => {
+      const bodyDivList = document.querySelector('#root>div:nth-child(2)').children;
+      const divArray = Array.from(bodyDivList) as HTMLDivElement[];
+
+      const prevPostDiv = divArray.filter((el) => {
+        return el.innerText.includes('이전 포스트');
+      });
+
+      if (prevPostDiv.length === 0) {
+        return null;
+      }
+
+      const prevPostChildren = Array.from(prevPostDiv[0].children).filter((el: HTMLDivElement) =>
+        el.innerText.includes('이전 포스트')
+      )[0].children;
+
+      const prevPostATag = Array.from(prevPostChildren)[0] as HTMLAnchorElement;
+
+      return prevPostATag.href;
+    });
+
+    return prevPost;
+  } catch (err) {
+    console.log(err);
+  }
+};
