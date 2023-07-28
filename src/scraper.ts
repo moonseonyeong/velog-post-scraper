@@ -1,10 +1,11 @@
 import { downloadJsonFile } from './utils/download';
 import { goToPage } from './utils/browser';
 import { clickFirstPost, getPost, getPrevPost } from './utils/scraper';
+import { Post } from 'types';
 
 export const scrapeVelogPosts = async (URL: string) => {
   const { page } = await goToPage(false, URL);
-  const posts = [];
+  const posts: Post[] = [];
   let successCount = 0;
 
   await clickFirstPost(page);
@@ -24,8 +25,10 @@ export const scrapeVelogPosts = async (URL: string) => {
     successCount++;
   }
 
-  posts.map((post, idx) => {
-    console.log(idx, post);
-    // await downloadJsonFile('post', post);
+  console.log(`while탈출`, hasPrevPost);
+
+  posts.map(async (post, idx) => {
+    console.log(idx, post.title);
+    await downloadJsonFile(`${post.createdAt}`, post);
   });
 };
