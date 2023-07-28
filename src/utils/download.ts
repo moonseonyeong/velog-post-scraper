@@ -1,8 +1,17 @@
+import { Post } from 'types';
 const fs = require('fs');
 
-export const downloadJsonFile = async (fileNm: string, contents: any) => {
+export const downloadJsonFile = async (fileNm: string, contents: Post) => {
   let filePath = fileNm + '.json';
-  fs.writeFileSync(filePath, JSON.stringify(contents));
+
+  const jsonContents = `{
+    "title": "${contents.title}",
+    "content": "${contents.content}",
+    "createdAt": "${contents.createdAt}",
+    "tags": ${JSON.stringify(contents.tags, null, 2)}
+  }`;
+
+  fs.writeFileSync(filePath, jsonContents);
 
   console.log('File downloaded:', filePath);
 };
