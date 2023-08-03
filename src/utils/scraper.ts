@@ -1,5 +1,5 @@
 import { Page } from 'puppeteer';
-import { Post } from 'types';
+import { Post } from '../types';
 
 export const clickFirstPost = async (page: Page) => {
   const firstPostTitleSelector = `#root > div:nth-child(2) > div:nth-child(3) > div:nth-child(4) > div:nth-child(3) > div > div:nth-child(1) > a:nth-child(2) > h2`;
@@ -37,9 +37,8 @@ export const getContent = async (page: Page) => {
   await page.waitForSelector('div.atom-one');
   const content = await page.evaluate(() => {
     const contentClassName = `atom-one`;
-    const content = document
-      .getElementsByClassName(contentClassName)[0]
-      ?.innerHTML.replaceAll('\n', '');
+
+    const content = document.getElementsByClassName(contentClassName)[0]?.innerHTML;
 
     return content;
   });
