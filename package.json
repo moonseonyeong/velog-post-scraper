@@ -1,6 +1,6 @@
 {
   "name": "velog-post-scraper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "velog 게시글 긁어오기",
   "main": "index.js",
   "scripts": {
