@@ -1,7 +1,8 @@
 import { goToPage } from '../utils/browser';
 
-export const getTotalPostCount = async (URL: string) => {
-  const { page } = await goToPage(false, URL);
+export const getTotalPostCount = async (userId: string) => {
+  const url: string = `https://velog.io/@${userId}`;
+  const { page } = await goToPage(false, url);
 
   const postCountText = await page.evaluate(() => {
     const postTagList = document.querySelectorAll('ul')[0].children;

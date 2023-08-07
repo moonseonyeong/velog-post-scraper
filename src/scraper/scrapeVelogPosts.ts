@@ -2,8 +2,10 @@ import { goToPage } from '../utils/browser';
 import { clickFirstPost, getPost, getPrevPost } from '../utils/scraper';
 import { Post } from '../types';
 
-export const scrapeVelogPosts = async (URL: string) => {
-  const { page } = await goToPage(true, URL);
+export const scrapeVelogPosts = async (userId: string) => {
+  const url: string = `https://velog.io/@${userId}`;
+
+  const { page } = await goToPage(false, url);
   const posts: Post[] = [];
   let successCount = 0;
 
