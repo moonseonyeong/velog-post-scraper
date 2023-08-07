@@ -12,6 +12,4 @@ export const downloadJsonFile = async (fileNm: string, contents: Post) => {
   }`;
 
   fs.writeFileSync(filePath, jsonContents);
-
-  console.log('File downloaded:', filePath);
 };

@@ -32,7 +32,6 @@ export const scrapeVelogPosts = async (userId: string) => {
     const post = await getPost(page);
     posts.push(post);
 
-    console.log('이전 포스트가 존재합니다.', `카운트 증가 : ${successCount} , ${post.title}`); // TODO : console.log 제거
     successCount++;
   }
 
