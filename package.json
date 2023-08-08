@@ -1,12 +1,12 @@
 {
   "name": "velog-post-scraper",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "velog 게시글 긁어오기",
+  "type": "module",
   "main": "index.js",
-  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node index.ts"
+    "start": "npx ts-node index.ts",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   "homepage": "https://github.com/moonseonyeong/velog-post-scraper#readme",
   "dependencies": {
     "puppeteer": "^20.6.0",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
     "typescript": "^5.1.3"
   }
 }
