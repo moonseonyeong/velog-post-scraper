@@ -5,7 +5,7 @@ import { Post } from '../types';
 export const scrapeVelogPosts = async (userId: string) => {
   const url: string = `https://velog.io/@${userId}`;
 
-  const { page } = await goToPage(false, url);
+  const { page } = await goToPage(true, url);
   const posts: Post[] = [];
   let successCount = 0;
 
