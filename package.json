@@ -4,6 +4,7 @@
   "description": "velog 게시글 긁어오기",
   "type": "module",
   "main": "index.js",
+  "types": "dist/types.d.ts",
   "scripts": {
     "start": "npx ts-node index.ts",
     "build": "tsc"
