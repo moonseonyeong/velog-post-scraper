@@ -1,3 +1,3 @@
-import { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts } from './src/scraper/index';
+import { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts, add } from './src/scraper/index';
 
-export { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts };
+export { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts, add };
