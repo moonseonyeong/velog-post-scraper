@@ -1,9 +1,9 @@
 {
   "name": "velog-post-scraper",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "velog 게시글 긁어오기",
   "type": "module",
-  "main": "index.js",
+  "main": "index.ts",
   "types": "dist/types.d.ts",
   "scripts": {
     "start": "npx ts-node index.ts",

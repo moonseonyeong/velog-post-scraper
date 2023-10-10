@@ -1,3 +1,8 @@
-import { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts, add } from './src/scraper/index';
+function add(a, b) {
+  return a + b;
+}
 
-export { getTotalPostCount, scrapeVelogPosts, downloadVelogPosts, add };
+module.exports = {
+  add,
+};
+
