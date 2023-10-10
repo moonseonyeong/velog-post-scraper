@@ -3,7 +3,7 @@
   "version": "1.0.10",
   "description": "velog 게시글 긁어오기",
   "type": "module",
-  "main": "index.ts",
+  "main": "index.js",
   "types": "dist/types.d.ts",
   "scripts": {
     "start": "npx ts-node index.ts",
