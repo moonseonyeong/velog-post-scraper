@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "declaration": true
   },
   "ts-node": {
