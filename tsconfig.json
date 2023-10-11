@@ -10,7 +10,10 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "baseUrl": "./",
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "*": ["src/*"]
+    }
   },
   "ts-node": {
     "esm": true
