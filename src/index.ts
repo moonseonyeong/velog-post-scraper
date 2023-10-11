@@ -3,4 +3,8 @@ import { getTotalPostCount } from './scraper/getTotalPostCount';
 import { downloadVelogPosts } from './scraper/downloadVelogPosts';
 import { consoleUtils } from 'utils/console';
 
-export { scrapeVelogPosts, getTotalPostCount, downloadVelogPosts, consoleUtils };
+const add = (a: number, b: number) => {
+  return a + b;
+};
+
+export { scrapeVelogPosts, getTotalPostCount, downloadVelogPosts, consoleUtils, add };
