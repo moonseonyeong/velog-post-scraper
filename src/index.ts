@@ -1,7 +1,5 @@
-function add(a, b) {
+function addddd(a, b) {
   return a + b;
 }
 
-
-
-export { add }
+export { addddd };
